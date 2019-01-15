@@ -11,6 +11,6 @@ use buzzingpixel\minify\MinifyApi;
 
 return [
     MinifyApi::class => function () {
-        return new MinifyApi();
+        return new MinifyApi(getenv('DISABLE_MINIFICATION') !== 'true');
     }
 ];
